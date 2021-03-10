@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View,TouchableOpacity,TextInput,Image} from 'react-native'
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default class App extends Component {
+export default class CoreComponen extends Component {
     constructor(props) {
         super(props);
         this.state={};
     }
   render() {
     return (
-        <View>
+        <View  >
             <Text style={styles.text2}>React-Native</Text>
-            <View>
+            <View>  
             <Image 
             style={styles.img}
             source={require('../src/image/logo.png')} />
@@ -26,8 +27,10 @@ export default class App extends Component {
         <TextInput 
             placeholder='Your Email' 
             style={styles.formInput}
-        />
-        <TouchableOpacity style ={styles.button}>
+        />   
+         <TouchableOpacity 
+         onPress={() => this.props.navigation.navigate('Welcome')}
+         style ={styles.button}  > 
             <Text style={styles.text1}>Login</Text>
         </TouchableOpacity>
       </View>
@@ -42,6 +45,7 @@ const styles = StyleSheet.create({
      paddingHorizontal:18,
      marginVertical:20,
 
+
     },
     formInput:{
         height:50,
@@ -50,10 +54,11 @@ const styles = StyleSheet.create({
         borderRadius:18,
         padding:15,
         marginTop:15,
+        
     },
     button:{
         height:50,
-        backgroundColor:'#cfdac8',
+        backgroundColor:'dodgerblue',
         justifyContent:'center',
         alignItems:'center',
         borderRadius:18,
@@ -73,7 +78,7 @@ const styles = StyleSheet.create({
     img:{
         width:200,
         height:200,
-        marginHorizontal:70,
+        marginHorizontal:80,
         
     },
 
