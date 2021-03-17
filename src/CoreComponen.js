@@ -6,11 +6,17 @@ import { createStackNavigator } from '@react-navigation/stack';
 export default class CoreComponen extends Component {
     constructor(props) {
         super(props);
-        this.state={};
+        this.state={
+            Username:"",
+            Email:''
+        };
+        
     }
   render() {
     return (
-        <View  >
+        <View style={styles.bg1}>
+ 
+        <View >
             <Text style={styles.text2}>React-Native</Text>
             <View>  
             <Image 
@@ -21,18 +27,23 @@ export default class CoreComponen extends Component {
         <View style ={styles.container}>   
          
         <TextInput 
+            onChangeText ={(Username)=>this.setState({Username})}
+            value={this.state.Username}
             placeholder='Username' 
             style={styles.formInput}
         />
         <TextInput 
+            onChangeText={(Email)=>this.setState({Email})}
+            value={this.state.Email}
             placeholder='Your Email' 
             style={styles.formInput}
         />   
          <TouchableOpacity 
-         onPress={() => this.props.navigation.navigate('Welcome')}
+         onPress={() => this.props.navigation.navigate('Welcome',{Username:'WULANAFKARINA',Email:"wulanafkarinaa@gmail.com"})}
          style ={styles.button}  > 
             <Text style={styles.text1}>Login</Text>
         </TouchableOpacity>
+      </View>
       </View>
       </View>
      
@@ -41,7 +52,11 @@ export default class CoreComponen extends Component {
 }
 
 const styles = StyleSheet.create({
-  container:{
+    bg1:{
+     flex:1,
+     backgroundColor:'#f8a1d1',
+    },
+    container:{
      paddingHorizontal:18,
      marginVertical:20,
 

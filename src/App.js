@@ -6,6 +6,8 @@ import CoreComponen2 from './CoreComponen2';
 import CoreComponen from './CoreComponen';
 
 
+
+
 const Stack = createStackNavigator();
 
 function App() {
