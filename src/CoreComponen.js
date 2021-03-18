@@ -43,6 +43,11 @@ export default class CoreComponen extends Component {
          style ={styles.button}  > 
             <Text style={styles.text1}>Login</Text>
         </TouchableOpacity>
+        <TouchableOpacity 
+         onPress={() => this.props.navigation.navigate('List')}
+         style ={styles.button}  > 
+            <Text style={styles.text1}>FlatList</Text>
+        </TouchableOpacity>
       </View>
       </View>
       </View>

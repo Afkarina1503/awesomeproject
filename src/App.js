@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import CoreComponen2 from './CoreComponen2';
 import CoreComponen from './CoreComponen';
+import CoreComponen3 from './CoreComponen3'
 
 
 
@@ -17,6 +18,8 @@ function App() {
         screenOptions={{headerShown:false}}>
         <Stack.Screen name="satu" component={CoreComponen} />
         <Stack.Screen name="Welcome" component={CoreComponen2} />
+        <Stack.Screen name="List" component={CoreComponen3} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
