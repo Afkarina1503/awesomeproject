@@ -31,11 +31,6 @@ export default class CoreComponen2 extends Component {
              
             <Text style={styles.text1}>Back</Text>
         </TouchableOpacity>
-        <TouchableOpacity 
-         onPress={() => this.props.navigation.navigate('List')}
-         style ={styles.button}  > 
-            <Text style={styles.text1}>FlatList</Text>
-        </TouchableOpacity>
       </View>
       </View>
       </View>
@@ -49,7 +44,7 @@ export default class CoreComponen2 extends Component {
 const styles = StyleSheet.create({
     bg1:{
        flex:1,
-       backgroundColor:'#fbc8d4'
+       backgroundColor:'#f8a1d1'
     },
   container:{
      paddingHorizontal:18,

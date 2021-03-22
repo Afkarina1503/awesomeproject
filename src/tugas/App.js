@@ -14,7 +14,8 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="React-native">
+      <Stack.Navigator initialRouteName="React-native"
+        screenOptions={{headerShown:false}}>
         <Stack.Screen name="satu" component={CoreComponen} />
         <Stack.Screen name="Welcome" component={CoreComponen2} />
         <Stack.Screen name="List" component={CoreComponen3} />

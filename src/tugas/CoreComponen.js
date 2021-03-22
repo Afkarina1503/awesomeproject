@@ -59,7 +59,7 @@ export default class CoreComponen extends Component {
 const styles = StyleSheet.create({
     bg1:{
      flex:1,
-     backgroundColor:'#fbc8d4',
+     backgroundColor:'#f8a1d1',
     },
     container:{
      paddingHorizontal:18,
